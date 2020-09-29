@@ -11,27 +11,50 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 const roleArray = ["manager", "engineer", "intern"];
+const questions = [
+  "What is your manager's office number?",
+  "What is your engineer's GitHub username?",
+  "What is your intern's school?",
+];
 
-// inquirer.prompt([
-//     {
-//         type: "input",
-//         name: "name",
-//         message: `What is your ${roleArray[0]}'s name?`,   
-//         default: "No name given."
-//     },
-//     {
-//         type: "number",
-//         name: "id",
-//         message: `What is your ${roleArray[0]}'s id?`,   
-//         default: "No id given."
-//     },
-//     {
-//         type: "number",
-//         name: "id",
-//         message: `What is your ${roleArray[0]}'s email address?`,   
-//         default: "No id given."
-//     }
-// ])
+inquirer
+  .prompt([
+    {
+      type: "input",
+      name: "name",
+      message: `What is your ${roleArray[0]}'s name?`,
+      default: "No name given.",
+    },
+    {
+      type: "number",
+      name: "id",
+      message: `What is your ${roleArray[0]}'s id?`,
+      default: "No id given.",
+    },
+    {
+      type: "input",
+      name: "email",
+      message: `What is your ${roleArray[0]}'s email address?`,
+      default: "No email address given.",
+    },
+    {
+      type: "input",
+      name: "officeNumber",
+      message: questions[0],
+    },
+  ])
+  .then(function (response) {
+    const {name, id, email, officeNumber} = response;
+    const manager = new Manager(name, id, email, officeNumber);
+    manager.getName();
+    manager.getId();
+    manager.getEmail();
+    manager.getOfficeNumber();
+    manager.getRole();
+  })
+  .catch(function (error) {
+    if (error) throw error;
+  });
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)

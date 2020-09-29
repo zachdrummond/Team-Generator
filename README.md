@@ -24,7 +24,9 @@ This is a command-line application that generates a software engineering team di
 * Node Command-Line User Interface
 * Unit Tests
 * Logical Code Structure
+* Modules
 * Node Package Manager - Inquirer, Jest
+* Classes
 * Promises
 * Objects
 * Arrays
@@ -66,12 +68,6 @@ You will build a software engineering team generator command line application. T
 ![Employee Summary 1](./Assets/10-OOP-homework-demo-1.png)
 ![Employee Summary 2](./Assets/10-OOP-homework-demo-2.png)
 
-It is recommended that you follow this workflow:
-
-1. Run tests
-2. Create or update classes to pass a single test case
-3. Repeat
-
 ### Hints
 
 * You will want to make your methods as pure as possible. This means try to make your methods simple so that they are easier to test.
@@ -89,45 +85,6 @@ It is recommended that you follow this workflow:
 * User can use the CLI to generate an HTML page that displays information about their team.
 
 * All tests must pass.
-
-### Classes
-The project must have the these classes: `Employee`, `Manager`, `Engineer`,
-`Intern`. The tests for these classes in the `tests` directory must all pass.
-
-The first class is an `Employee` parent class with the following properties and
-methods:
-
-  * name
-  * id
-  * email
-  * getName()
-  * getId()
-  * getEmail()
-  * getRole() // Returns 'Employee'
-
-The other three classes will extend `Employee`. 
-
-In addition to `Employee`'s properties and methods, `Manager` will also have:
-
-  * officeNumber
-
-  * getRole() // Overridden to return 'Manager'
-
-In addition to `Employee`'s properties and methods, `Engineer` will also have:
-
-  * github  // GitHub username
-
-  * getGithub()
-
-  * getRole() // Overridden to return 'Engineer'
-
-In addition to `Employee`'s properties and methods, `Intern` will also have:
-
-  * school 
-
-  * getSchool()
-
-  * getRole() // Overridden to return 'Intern'
 
 ### User input
 

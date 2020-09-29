@@ -1,7 +1,7 @@
 /* Adds color to the Jumbotron */
 .team-heading {
     color: white;
-    background-color: red;
+    background-color: navy;
 }
 
 /* Adds margin to the cards */
@@ -11,8 +11,7 @@
 
 /* Adds color to the card headers */
 .card-header{
-    color: white;
-    background-color: blue;
+    background-color: lightskyblue;
 }
 
 /* Adds color to the card body */

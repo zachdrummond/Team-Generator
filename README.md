@@ -23,22 +23,41 @@ This is a command-line application that generates a software engineering team di
 ### *JavaScript - Node.js*
 * Node Command-Line User Interface
 * Unit Tests
-* Logical Code Structure
 * Modules
+* Node Packages - File System, Path
 * Node Package Manager - Inquirer, Jest
-* Classes
+* Classes & Sub-Classes
+* Constructors
 * Promises
-* Objects
+* Objects & Destructured Objects
 * Arrays
 * Methods
-* Global and Local Variables
 * Functions
-* Switch Statements
+* if...else Statements
 * Template Literals
 * Comments
 
-### *HTML*
+### *Bootstrap*
+* Grid System
+* Jumbotron
+* Contact Cards
+* List Group
+* Containers
+* Icons
+* Sizing
+* Spacing
+* Alignment
+* Colors
 
+### *HTML*
+* Templates
+* Logical Structure
+* Sequential Order
+* Concise Descriptive Title
+
+### *CSS*
+* Margin
+* Color
 
 ## App Preview
 ### Command-Line Instructions

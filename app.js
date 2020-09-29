@@ -1,3 +1,4 @@
+// Imported Modules and Packages
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -5,21 +6,13 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 
+// Modules to Create the HTML App
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 const teamArray = [];
 
-// After the user has input all employees desired, call the `render` function (required
-// above) and pass in an array containing all employee objects; the `render` function will
-// generate and return a block of HTML including templated divs for each employee!
-
-// After you have your html, you're now ready to create an HTML file using the HTML
-// returned from the `render` function. Now write it to a file named `team.html` in the
-// `output` folder. You can use the variable `outputPath` above target this location.
-// Hint: you may need to check if the `output` folder exists and create it if it
-// does not.
-
+// Function - Allows the user to choose which team member he/she wants to create
 function createMemberType() {
   inquirer
     .prompt([
@@ -32,10 +25,16 @@ function createMemberType() {
       },
     ])
     .then((response) => {
-      if (response.teamMember === "None") {
+      // Repeats the prompt if the user chooses none without building a team
+      if (teamArray.length === 0 && response.teamMember === "None") {
+        console.log(
+          "--------------------------------------------------------------------\nYou did not add any members to your team."
+        );
+        createMemberType();
+      } else if (response.teamMember === "None") { // Creates the HTML Page when the user clicks "None"
         console.log("Team Roster Complete.");
-        fs.writeFile(outputPath, render(teamArray), error =>{
-          if(error) throw error;
+        fs.writeFile(outputPath, render(teamArray), (error) => {
+          if (error) throw error;
         });
       } else {
         createTeam(response.teamMember);
@@ -46,6 +45,7 @@ function createMemberType() {
     });
 }
 
+// Function - Allows the user to create each team member
 function createTeam(memberType) {
   let counter = 0;
 
@@ -88,8 +88,10 @@ function createTeam(memberType) {
       },
     ])
     .then((response) => {
+      // Destructures the response object
       const { name, id, email, special } = response;
 
+      // Creates an instance of a team member and adds it to the array
       if (memberType === "Manager") {
         teamArray.push(new Manager(name, id, email, special));
       } else if (memberType === "Engineer") {

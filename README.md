@@ -61,9 +61,9 @@ This is a command-line application that generates a software engineering team di
 
 ## App Preview
 ### Command-Line Instructions
-![CLI](./images/)
-### ReadMe
-![ReadMe](./Assets/office.png)
+![CLI](./Assets/commandLineInterface.png)
+### App Preview
+![App Preview](./Assets/office.png)
 
 ## Credits
 * https://nodejs.org/en/

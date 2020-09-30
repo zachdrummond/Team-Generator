@@ -16,7 +16,7 @@ This is a command-line application that generates a software engineering team di
 3. Look at the new HTML website that will be created.
 
 ## Links
-* Video Walkthrough: 
+* Video Walkthrough: https://drive.google.com/file/d/11OMCFwZNEY4eLKeyjzs0CTYj8GHDFXgi/view
 * GitHub Repository: https://github.com/zachdrummond/Team-Generator
 
 ## Design Elements
@@ -63,7 +63,7 @@ This is a command-line application that generates a software engineering team di
 ### Command-Line Instructions
 ![CLI](./images/)
 ### ReadMe
-![ReadMe](./images/)
+![ReadMe](./Assets/office.png)
 
 ## Credits
 * https://nodejs.org/en/

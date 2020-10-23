@@ -20,44 +20,14 @@ This is a command-line application that generates a software engineering team di
 * GitHub Repository: https://github.com/zachdrummond/Team-Generator
 
 ## Design Elements
-### *JavaScript - Node.js*
-* Node Command-Line User Interface
-* Unit Tests
-* Modules
-* Node Packages - File System, Path
+* JavaScript
+* Node.js
 * Node Package Manager - Inquirer, Jest
-* Classes & Sub-Classes
-* Constructors
-* Promises
-* Objects & Destructured Objects
-* Arrays
-* Methods
-* Functions
-* if...else Statements
-* Template Literals
-* Comments
-
-### *Bootstrap*
-* Grid System
-* Jumbotron
-* Contact Cards
-* List Group
-* Containers
-* Icons
-* Sizing
-* Spacing
-* Alignment
-* Colors
-
-### *HTML*
-* Templates
-* Logical Structure
-* Sequential Order
-* Concise Descriptive Title
-
-### *CSS*
-* Margin
-* Color
+* Command-Line User Interface
+* jQuery
+* HTML
+* CSS
+* Bootstrap
 
 ## App Preview
 ### Command-Line Instructions
@@ -69,3 +39,6 @@ This is a command-line application that generates a software engineering team di
 * https://nodejs.org/en/
 * https://www.npmjs.com/package/inquirer
 * https://www.npmjs.com/package/jest
+* https://www.npmjs.com/
+* https://jquery.com/
+* https://getbootstrap.com/
